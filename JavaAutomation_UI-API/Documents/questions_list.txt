@@ -1,0 +1,2 @@
+1)Fetch last N lines from a text file.
+2)complete puzzles from here : https://www.linkedin.com/feed/update/urn:li:activity:7249775917726650369/

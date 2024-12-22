@@ -1,0 +1,5 @@
+Java CSVs documentation
+https://springhow.com/apache-commons-csv/
+
+# documentation for reading writing to text file
+https://www.codejava.net/java-se/file-io/how-to-read-and-write-text-file-in-java

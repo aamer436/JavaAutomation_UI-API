@@ -1,0 +1,114 @@
+{
+  "interviewPrep": {
+    "topics": [
+      {
+        "name": "Data Structures",
+        "questions": [
+          {
+            "question": "Explain the difference between an array and a linked list.",
+            "difficulty": "Easy",
+            "resources": [
+              {
+                "type": "article",
+                "title": "Arrays vs. Linked Lists",
+                "url": "https://example.com/arrays-vs-linked-lists"
+              },
+              {
+                "type": "video",
+                "title": "Data Structures Overview",
+                "url": "https://example.com/data-structures-video"
+              }
+            ]
+          },
+          {
+            "question": "What is a binary search tree?",
+            "difficulty": "Medium",
+            "resources": [
+              {
+                "type": "article",
+                "title": "Understanding Binary Search Trees",
+                "url": "https://example.com/bst"
+              },
+              {
+                "type": "video",
+                "title": "Binary Trees Explained",
+                "url": "https://example.com/binary-trees"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Algorithms",
+        "questions": [
+          {
+            "question": "Explain the quicksort algorithm.",
+            "difficulty": "Medium",
+            "resources": [
+              {
+                "type": "article",
+                "title": "Quicksort Explained",
+                "url": "https://example.com/quicksort"
+              },
+              {
+                "type": "video",
+                "title": "Sorting Algorithms",
+                "url": "https://example.com/sorting-algorithms"
+              }
+            ]
+          },
+          {
+            "question": "What is dynamic programming?",
+            "difficulty": "Hard",
+            "resources": [
+              {
+                "type": "article",
+                "title": "Dynamic Programming Basics",
+                "url": "https://example.com/dynamic-programming"
+              },
+              {
+                "type": "video",
+                "title": "Introduction to Dynamic Programming",
+                "url": "https://example.com/dp-introduction"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "selfAssessment": {
+      "skills": [
+        {
+          "name": "Problem Solving",
+          "rating": 4,
+          "improvementAreas": ["Practice more coding challenges", "Study algorithm complexity"]
+        },
+        {
+          "name": "System Design",
+          "rating": 3,
+          "improvementAreas": ["Read design patterns", "Work on sample projects"]
+        }
+      ],
+      "confidence": {
+        "overall": 75,
+        "areas": {
+          "dataStructures": 80,
+          "algorithms": 70,
+          "systemDesign": 60
+        }
+      }
+    },
+    "mockInterviews": [
+      {
+        "date": "2024-10-20",
+        "partner": "John Doe",
+        "feedback": "Improve clarity in explanations."
+      },
+      {
+        "date": "2024-10-25",
+        "partner": "Jane Smith",
+        "feedback": "Good problem-solving skills, but practice time management."
+      }
+    ]
+  }
+}

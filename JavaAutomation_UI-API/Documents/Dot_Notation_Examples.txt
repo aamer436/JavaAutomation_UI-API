@@ -1,0 +1,62 @@
+Read json file and extract data:
+import io.restassured.path.json.JsonPath;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+
+public class RestAssuredFromFile {
+    public static void main(String[] args) throws IOException {
+        // Load the JSON file
+        File jsonFile = new File("path/to/your/data.json"); // Update the path accordingly
+        String jsonString = new String(Files.readAllBytes(jsonFile.toPath()));
+
+        // Parse JSON
+        JsonPath jsonPath = new JsonPath(jsonString);
+
+        // Get all customer names using dot notation
+        List<String> customerNames = jsonPath.getList("store.customers.name");
+
+        // Print all customer names
+        System.out.println("Customer Names:");
+        for (String name : customerNames) {
+            System.out.println(name);
+        }
+    }
+}
+
+
+Extracting data from response returned from Rest assured:
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+
+import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.*;
+
+public class RestAssuredExample {
+    public static void main(String[] args) {
+        // Sample JSON string (you can also set this up as a response from an API)
+        String jsonString = "{ \"store\": { \"name\": \"Fictional Bookstore\", \"location\": { \"address\": \"123 Book Lane\", \"city\": \"Literature City\", \"state\": \"CA\", \"zip\": \"90210\" }, \"inventory\": [ { \"isbn\": \"978-3-16-148410-0\", \"title\": \"The Great Adventure\", \"author\": { \"firstName\": \"John\", \"lastName\": \"Doe\", \"bio\": \"John Doe is a celebrated author known for his thrilling narratives.\" }, \"genre\": \"Fiction\", \"publishedDate\": \"2022-05-01\", \"price\": 19.99, \"reviews\": [ { \"reviewer\": \"Alice\", \"rating\": 5, \"comment\": \"An exhilarating read from start to finish!\", \"date\": \"2022-06-10\" }, { \"reviewer\": \"Bob\", \"rating\": 4, \"comment\": \"Great story, but a bit predictable.\", \"date\": \"2022-06-15\" } ] }, { \"isbn\": \"978-1-23-456789-7\", \"title\": \"The Mystery of Time\", \"author\": { \"firstName\": \"Jane\", \"lastName\": \"Smith\", \"bio\": \"Jane Smith weaves intricate tales filled with suspense.\" }, \"genre\": \"Mystery\", \"publishedDate\": \"2023-01-20\", \"price\": 24.99, \"reviews\": [] } ], \"customers\": [ { \"customerId\": \"C001\", \"name\": \"Alice Johnson\", \"email\": \"alice@example.com\", \"purchaseHistory\": [ { \"isbn\": \"978-3-16-148410-0\", \"purchaseDate\": \"2022-06-05\", \"price\": 19.99 } ] }, { \"customerId\": \"C002\", \"name\": \"Bob Brown\", \"email\": \"bob@example.com\", \"purchaseHistory\": [] } ] } }";
+
+        // Parsing JSON using Rest Assured
+        Response response = given()
+                .contentType("application/json")
+                .body(jsonString)
+                .when()
+                .post("https://your.api/endpoint") // Replace with your API endpoint
+                .then()
+                .extract().response();
+
+        // Accessing elements using dot notation
+        String storeName = response.jsonPath().getString("store.name");
+        String firstBookTitle = response.jsonPath().getString("store.inventory[0].title");
+        String firstReviewer = response.jsonPath().getString("store.inventory[0].reviews[0].reviewer");
+        String customerName = response.jsonPath().getString("store.customers[0].name");
+
+        // Printing the accessed values
+        System.out.println("Store Name: " + storeName);
+        System.out.println("First Book Title: " + firstBookTitle);
+        System.out.println("First Reviewer of the First Book: " + firstReviewer);
+        System.out.println("Customer Name: " + customerName);
+    }
+}
