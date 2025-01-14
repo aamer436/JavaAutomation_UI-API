@@ -15,6 +15,7 @@ public class ReadWriteTextFile {
         try {
             //
             FileInputStream inputStream = new FileInputStream(System.getProperty("user.dir")+"/src/main/resources/"+"textfile.txt");
+            //FileReader fr = new FileReader(System.getProperty("user.dir")+"/src/main/resources/"+"textfile.txt");
             InputStreamReader reader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
             BufferedReader bufferedReader = new BufferedReader(reader);
             String line;

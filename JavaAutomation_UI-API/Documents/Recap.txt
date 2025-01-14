@@ -1,0 +1,13 @@
+1)Selenium - webdriver, webelement, searchcontext,
+https://www.selenium.dev/selenium/docs/api/java/org/openqa/selenium/WebDriver.html
+https://www.selenium.dev/selenium/docs/api/java/org/openqa/selenium/WebElement.html
+https://www.selenium.dev/selenium/docs/api/java/org/openqa/selenium/SearchContext.html
+https://www.selenium.dev/selenium/docs/api/java/org/openqa/selenium/interactions/Actions.html
+https://www.selenium.dev/selenium/docs/api/py/py-modindex.html
+https://www.selenium.dev/selenium/docs/api/py/webdriver_remote/selenium.webdriver.remote.webelement.html#module-selenium.webdriver.remote.webelement
+
+2)Framework - selenium java, selenium python
+3)Excel read write, CSV Read Write, Json Read Write - Java & Python
+4)Java Rest Assured, Python requests
+Parsing response using both
+5)Testng xml summary, Maven commands, Pytest Commands
