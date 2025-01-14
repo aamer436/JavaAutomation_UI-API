@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="04a75f03-095c-429b-8f29-49116a0f2989" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documents/questions_list.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Documents/questions_list.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/MyFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/MyFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/basics/Puzzles_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/basics/Puzzles_1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/basics/ReadWriteTextFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/basics/ReadWriteTextFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2n7UCLmyCCmECAHq1ILctOC9lMh" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.BubbleSort.executor&quot;: &quot;Run&quot;,
+    &quot;Application.LeetCode.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ParseJson.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ParseJson2.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.ParseJson3_UsingDotNotation.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ParseJson4_UsingDotNotation.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Puzzles_1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ReadWriteCsvFile.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ReadWriteExcelFile.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ReadWriteTextFile.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ReverseLinkedList.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TestFindBrokenLinks.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TestFindBrokenLinks_1.executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;TestNG.APITest1.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.APITest1.get_server_access_code.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.BaseClass.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Status.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TestCartFunctionality.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/maame/IdeaProjects/JavaAutomation_UI-API/output&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\maame\IdeaProjects\JavaAutomation_UI-API\output" />
+      <recent name="C:\Users\maame\IdeaProjects\JavaAutomation_UI-API\Documents" />
+      <recent name="C:\Users\maame\IdeaProjects\JavaAutomation_UI-API\src\main\java\com\practice\helper" />
+      <recent name="C:\Users\maame\IdeaProjects\JavaAutomation\Documents" />
+      <recent name="C:\Users\maame\IdeaProjects\JavaAutomation\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\maame\IdeaProjects\JavaAutomation_UI-API\Documents\Images" />
+      <recent name="C:\Users\maame\IdeaProjects\JavaAutomation\src\main\resourcess" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.practice.basics" />
+      <recent name="com.practice.tests" />
+      <recent name="com.practice.helper" />
+      <recent name="com.practice.api" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Puzzles_1">
+    <configuration name="BubbleSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.practice.basics.BubbleSort" />
+      <module name="JavaAutomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.practice.basics.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LeetCode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.practice.basics.LeetCode" />
+      <module name="JavaAutomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.practice.basics.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Puzzles_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.practice.basics.Puzzles_1" />
+      <module name="JavaAutomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.practice.basics.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReadWriteCsvFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.practice.basics.ReadWriteCsvFile" />
+      <module name="JavaAutomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.practice.basics.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReadWriteTextFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.practice.basics.ReadWriteTextFile" />
+      <module name="JavaAutomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.practice.basics.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Puzzles_1" />
+        <item itemvalue="Application.ReadWriteCsvFile" />
+        <item itemvalue="Application.ReadWriteTextFile" />
+        <item itemvalue="Application.LeetCode" />
+        <item itemvalue="Application.BubbleSort" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="04a75f03-095c-429b-8f29-49116a0f2989" name="Changes" comment="" />
+      <created>1728323481241</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1728323481241</updated>
+    </task>
+    <servers />
+  </component>
+</project>
