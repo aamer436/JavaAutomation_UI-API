@@ -49,6 +49,21 @@ public class Puzzles_1 {
 
         int[] input = new int[]{1, 3, 4, 6, 7, 3, 1, 2, 3};
         remove_duplicates_from_array(input);
+
+        SplitStringByNumbersAndReverse();
+
+        shiftEvenOdd();
+
+        stringImmutable();
+
+        reverse_array();
+
+        forEachExamples();
+
+        countOccurenceOfCharacters();
+
+        stringFunctions();
+
     }
 
     public static String get_rev_string(String input) {
@@ -57,6 +72,14 @@ public class Puzzles_1 {
         for (int i = input.length() - 1; i >= 0; i--) {
             reverse_string = reverse_string + input.charAt(i);
         }
+        System.out.println("Reverse String "+reverse_string);
+
+        String rev_string1 = "";
+        for (int i = 0; i < input.length(); i++) {
+            rev_string1 = input.charAt(i)+ rev_string1 ;
+        }
+        System.out.println("Reverse String "+rev_string1);
+
         //return reverse_string;
 
         //Approach 2
@@ -78,6 +101,7 @@ public class Puzzles_1 {
     }
 
     public static int get_largest_element_in_list(List<Integer> input) {
+        System.out.println(" method name get_largest_element_in_list");
         //Approach 1
         int largest = input.get(0);
         for (Integer i : input) {
@@ -87,9 +111,11 @@ public class Puzzles_1 {
         //return largest;
 
         //Approach 2
+        //Collections.sort(input,Collections.reverseOrder());
         Collections.sort(input);
         int largest1 = input.get(input.size() - 1);
         int smallest1 = input.get(0);
+        System.out.println(" Largest and Smallest "+largest1+" "+smallest1);
         //return largest1;
 
         //Approach 3
@@ -215,7 +241,7 @@ public class Puzzles_1 {
         //Approach 2
         int a=0;
         int b=1;
-        for(int i=2;i<input+1;i++){
+        for(int i=1;i<=input;i++){
             int c=a+b;
             a=b;
             b=c;
@@ -294,6 +320,7 @@ public class Puzzles_1 {
         Arrays.sort(charArray2);
         //Compare sorted Arrays
         return Arrays.equals(charArray1,charArray2);
+
     }
 
     public static List<String> reverse_each_word_in_sentence(String input){
@@ -328,7 +355,7 @@ public class Puzzles_1 {
 
         //Approach 2
         List<Integer> input1 = Arrays.asList(1,34,6,3,4,2,4,1,6,445,3);
-        HashSet<Integer> result = new HashSet<>(input1);
+        Set<Integer> result = new HashSet<>(input1);
         System.out.println("Unique values using HashSet "+result);
     }
 
@@ -351,6 +378,13 @@ public class Puzzles_1 {
         }
         System.out.println("Unique chars in string "+result2);
 
+        List<Integer> i=Arrays.asList(2,3,4,2,4,2,4,2,3,2,4,8);
+        Set result3=new HashSet<>(i);
+        System.out.println(result3);
+        String s="asdfijsnfjkjkdfj";
+        //Not possible since HashSet expected a collection - List or Set
+        //Set result4=new HashSet<>(i);
+        //System.out.println(result4);
         //Approach 3 using Streams
         Set<Character> uniqueCharacters = input.chars().mapToObj(c->(char) c).collect(Collectors.toSet());
         System.out.println("Unique charcters in string "+uniqueCharacters);
@@ -408,8 +442,8 @@ public class Puzzles_1 {
         int a=1,b=2;
         System.out.println("Before- a, b"+a+" "+b);
         a=a+b;
-        b=a-b;
-        a=a-b;
+        b=a-b; //a+b-b
+        a=a-b; //a+b-a
         System.out.println("After- a, b"+a+" "+b);
     }
 
@@ -429,4 +463,115 @@ public class Puzzles_1 {
         System.out.println("Vowels "+new HashSet<>(vowels));
         System.out.println("Consonants "+new HashSet<>(consonants));
     }
+
+    public static void SplitStringByNumbersAndReverse() {
+        // Test string
+        String input = "Hello123World456Java789Programming";
+
+        // Split the string based on numeric values
+        String[] parts = input.split("(?<=\\D)(?=\\d)|(?<=\\d)(?=\\D)");
+
+        // StringBuilder to build the result
+        StringBuilder result = new StringBuilder();
+
+        // Traverse the parts array
+        for (String part : parts) {
+            if (part.matches("\\D+")) {
+                // Reverse non-numeric parts
+                result.append(new StringBuilder(part).reverse());
+            } else {
+                // Keep numeric parts as they are
+                result.append(part);
+            }
+        }
+
+        // Output the result
+        System.out.println("Original String: " + input);
+        System.out.println("Processed String: " + result.toString());
+    }
+
+    public static void countOccurenceOfCharacters(){
+        String input="sdfjdnkajsdf";
+        Map<Character,Integer> count=new HashMap<>();
+        for(Character c: input.toCharArray()){
+            if(!count.containsKey(c)){
+                count.put(c,1);
+            }else{
+                count.put(c,count.get(c)+1);
+            }
+        }
+        System.out.println(count);
+    }
+
+    public static void shiftEvenOdd(){
+        //int[] a={1,2,3,4,5,6,7,8,9,10};
+        int[] a={12,45,6,67,44,56,100,56,78,89,34,12,33};
+        for(int j=0;j<a.length-1;j++) {
+            for (int i = j; i < a.length - 1; i++) {
+                if (a[i] % 2 != 0) {
+                    int temp = a[i];
+                    a[i] = a[i + 1];
+                    a[i + 1] = temp;
+                }
+            }
+        }
+        for(int i:a) {
+            System.out.println(i);
+        }
+
+    }
+
+    public static void stringImmutable(){
+        String str="Hello";
+        System.out.println("Original String "+str); //new string str at memory location X
+
+        //modifying the string str
+        str=str+" world";
+        System.out.println("modified string "+str); //modified string str at memory location Y
+
+        StringBuilder sbd = new StringBuilder("Hello");
+        sbd.append(" world"); //updates same string object instead of creating new one.
+        System.out.println("Updated string builder string "+sbd);
+    }
+
+    public static void reverse_array(){
+        Integer[] arr={2,34,5,3,5};
+        List<Integer> a =Arrays.asList(arr);
+        //Ascending
+        Collections.sort(a);
+        //Descending
+        Collections.sort(a,Collections.reverseOrder());
+        int[] b={1323,44,53,54,5,23};
+        Arrays.sort(b);
+        // THIS STATEMENT WON'T WORK -- Arrays.sort(b,Collections.reverseOrder());
+        // THIS WORKS
+        b = Arrays.stream(b)
+                .boxed()  // Convert int[] to Integer[]
+                .sorted(Comparator.reverseOrder())  // Sort in reverse order
+                .mapToInt(Integer::intValue)  // Convert back to int[]
+                .toArray();
+    }
+
+    public static void forEachExamples(){
+        List<Integer> test=Arrays.asList(1,2,4,5,332,1,2,3);
+        List<Integer> squares =test.stream().map(n->n*n).collect(Collectors.toList());
+        System.out.println("Squares "+squares);
+
+        List<Integer> even = test.stream().filter(n->n%2==0).collect(Collectors.toList());
+        System.out.println("even "+even);
+
+        int max = test.stream().max(Integer::compareTo).get();
+        int sum = test.stream().mapToInt(Integer::intValue).sum();
+        System.out.println("max -- sum  "+max+" "+sum);
+    }
+
+    public static String stringFunctions(){
+        String input="asifsjidjjinini";
+        String output=input.replaceAll("ini","abc00");
+        System.out.println(output);
+        return input;
+    }
+
+
+
 }

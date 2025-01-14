@@ -1,0 +1,100 @@
+1)HashMap vs TreeMap
+2)ElementNotClickableException vs ElementNotInteractableException
+3)Alpha vs Beta Testing
+4)Assert vs Verify
+5)String Builder vs String Buffer (not threadsafe-threadsafe,faster-slower)
+6)Interface vs Abstract class
+7)Singleton vs Factory design pattern
+8)Some interfaces in selenium - searchContext, TakesScreenshot, WebDriver, WebElement
+9)WebElement is an Interface , RemoteWebElement provides implementation for this interface
+******public class RemoteWebDriver extends RemoteWebElement implements WebDriver******
+RemoteWebDriver is an abstract class implementing WebDriver Interface.
+ChromeDriver, FirefoxDriver,SafariDriver,EdgeDriver are concrete implementations of WebDriver and extends
+   RemoteWebDriver class
+Navigation methods are also from Naviation Interface driver.navigate().back(), forward(),refresh(),to()
+Options is also an interface and we have classes ChromeOptions, FirefoxOptions used to configure browser settings
+JavaScriptExecutor is also an interface
+WebDriver and WebElement are child interfaces for SearchContext interface.
+10)Array vs ArrayList (fixed-variable size, single datatype-multiple datatypes,fast-slow,less memory-more memory)
+11)Collection vs Collections
+12)HashMap, HashSet
+Here’s a simple table summarizing the key differences between an **interface** and an **abstract class** in Java:
+----------------------------------------
+INTERFACE VS ABSTRACT CLASS
+| **Feature**                  | **Interface**                                  | **Abstract Class**                           |
+|------------------------------|------------------------------------------------|----------------------------------------------|
+| **Purpose**                   | Defines a contract for classes to implement.   | Used to provide common functionality to subclasses. |
+| **Methods**                   | Can only have abstract methods (until Java 8, default and static methods are allowed). | Can have both abstract and concrete (non-abstract) methods. |
+| **Fields/Variables**          | Can only have constants (public static final).  | Can have instance variables (can be any visibility: private, protected, etc.). |
+| **Constructor**               | Cannot have constructors.                     | Can have constructors.                      |
+| **Multiple Inheritance**      | A class can implement multiple interfaces.     | A class can inherit from only one abstract class. |
+| **Inheritance**               | A class implements an interface.               | A class extends an abstract class.           |
+| **Access Modifiers**         | All methods are implicitly public (unless specified otherwise). | Methods can have any access modifier (public, private, protected). |
+| **Default Methods**           | Can have default methods (from Java 8).        | Cannot have default methods.                 |
+| **Use Case**                  | Use when you need to define a contract (behavior) that can be implemented by multiple classes. | Use when you need a base class with some common implementation, but leave other methods for subclasses to define. |
+13)Access modifiers
+-Public - accessible everywhere
+-Protected - accessible within same package and in sub-classes in different packages as well
+-Default - accessible within same package
+-Private - accessible within same class
+14)Before After Annotations:
+Before Suite
+Before Test
+Before Class
+Before Method
+Test Method
+After Method
+After Class
+After Test
+After Suite
+
+14)DataProvider annotation
+@DataProvider(name = "loginData")
+public Object[][] getData() {
+    return new Object[][] {
+        { "user1", "password1" },
+        { "user2", "password2" },
+        { "user3", "password3" }
+    };
+}
+
+@Test(dataProvider = "loginData")
+public void testLogin(String username, String password) {
+    System.out.println("Logging in with " + username + " and " + password);
+}
+
+-------------------------------------------------------------------------------------------------
+=======================================================
+MAVEN COMMANDS:
+1)mvn clean test -Dtest=<package-name>`
+| Runs all test classes in a specific package.                                                             |
+2)mvn clean test -Dtest=<class-name>`
+| Runs a specific test class.                                                                              |
+3)mvn clean test -Dtest=<class-name>#<method-name>`
+| Runs a specific test method within a class.                                                              |
+4)mvn clean test -Dtest=<package-name>.<class-name>#<method-name>`
+| Runs a specific method within a class from a package.                                                    |
+5)mvn clean test -Dtest=<package-name>.<class-name>#<method-name> -Dtestng.includes=<method>`
+| Includes a specific method in the test execution (use `-Dtestng.includes` for method inclusion).         |
+| `mvn clean test -Dtest=<package-name>.<class-name>#<method-name> -Dtestng.excludes=<method>`
+| Excludes a specific method from the test execution (use `-Dtestng.excludes` for method exclusion).       |
+| `mvn clean test -Dtestng.xml=<path-to-testng-xml> -Dbrowser=<browser-name>`
+| Runs TestNG tests by passing the **TestNG XML file** and **browser name** parameter.                     |
+| `mvn clean install -Dtestng.xml=<path-to-testng-xml> -Dbrowser=<browser-name>`
+| Cleans, installs, and runs the tests with the specified TestNG XML and browser parameter.                |
+| `mvn clean verify -Dtestng.xml=<path-to-testng-xml> -Dbrowser=<browser-name>`
+| Cleans, verifies, and runs tests using the given TestNG XML and browser name.                            |
+| `mvn clean package -Dtestng.xml=<path-to-testng-xml> -Dbrowser=<browser-name>`
+| Builds the project and runs tests with the specified TestNG XML file and browser (e.g., Firefox/Chrome). |
+| `mvn site -Dtestng.xml=<path-to-testng-xml> -Dbrowser=<browser-name>`
+| Generates project site documentation, passing TestNG XML and browser as parameters.                      |
+| `mvn clean test -Dtest=com.example.tests.LoginTest`
+| Runs the `LoginTest` class in the `com.example.tests` package.                                           |
+| `mvn clean test -Dtest=com.example.tests.LoginTest#testLogin`
+| Runs the `testLogin` method in the `LoginTest` class.                                                     |
+| `mvn clean test -Dtest=com.example.tests.LoginTest#testLogin -Dtestng.includes=testLogin`
+| Includes the `testLogin` method in the execution.                                                         |
+| `mvn clean test -Dtest=com.example.tests.LoginTest#testLogin -Dtestng.excludes=testFailedLogin`
+| Excludes the `testFailedLogin` method from the execution.                                       |
+
+diff bw get & navigate().to() - waits for page load, doesnot wait

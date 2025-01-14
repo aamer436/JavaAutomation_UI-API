@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="CompleteTestSuite" parallel="tests" thread-count="2">
+    <!-- Suite-level configurations -->
+
+    <listeners>
+        <!-- Custom listener to listen for events during test execution -->
+        <listener class-name="com.example.CustomListener"/>
+    </listeners>
+
+    <!-- Run an entire package -->
+    <test name="RunPackageTests">
+        <packages>
+            <!-- Specify the package name to run all classes inside it -->
+            <package name="com.example.tests"/>
+        </packages>
+    </test>
+    <test name="TestGroup1">
+        <!-- Test-level configurations -->
+        <parameter name="browser" value="chrome"/>
+        <parameter name="timeout" value="5000"/>
+
+        <groups>
+            <run>
+                <!-- Include only regression tests -->
+                <include name="regression"/>
+                <!-- Exclude smoke tests -->
+                <exclude name="smoke"/>
+            </run>
+        </groups>
+
+        <classes>
+            <!-- Test classes to run -->
+            <class name="com.example.LoginTest">
+                <methods>
+                    <!-- Methods within the class to include/exclude -->
+                    <include name="testLogin"/>
+                    <exclude name="testFailedLogin"/>
+                </methods>
+            </class>
+            <class name="com.example.SearchTest"/>
+        </classes>
+    </test>
+
+    <test name="TestGroup2">
+        <!-- Another test configuration -->
+        <parameter name="browser" value="firefox"/>
+
+        <groups>
+            <run>
+                <!-- Include only smoke tests -->
+                <include name="smoke"/>
+                <!-- Exclude regression tests -->
+                <exclude name="regression"/>
+            </run>
+        </groups>
+
+        <classes>
+            <!-- Test classes to run -->
+            <class name="com.example.CheckoutTest">
+                <methods>
+                    <include name="testCheckout"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="TestGroup3">
+        <!-- Test with parallel execution on methods -->
+        <parameter name="browser" value="safari"/>
+
+        <classes>
+            <class name="com.example.PaymentTest">
+                <methods>
+                    <include name="testPayment"/>
+                    <include name="testRefund"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="TestGroup4">
+        <!-- Test that runs with a specific timeout -->
+        <parameter name="timeout" value="3000"/>
+
+        <classes>
+            <class name="com.example.ProfileUpdateTest"/>
+        </classes>
+    </test>
+
+    <test name="TestGroup5">
+        <!-- Test that runs with dependency -->
+        <depends-on-methods>
+            <method name="initializeData"/>
+        </depends-on-methods>
+
+        <classes>
+            <class name="com.example.UserRegistrationTest">
+                <methods>
+                    <include name="testUserRegistration"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+
+</suite>

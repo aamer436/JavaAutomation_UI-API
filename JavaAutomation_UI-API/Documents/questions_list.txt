@@ -1,2 +1,5 @@
 1)Fetch last N lines from a text file.
 2)complete puzzles from here : https://www.linkedin.com/feed/update/urn:li:activity:7249775917726650369/
+3)Integer to Roman – Convert an integer to Roman numeral format.
+4)3Sum – Find unique triplets in an array that sum to zero.
+5)Swap 2 strings
