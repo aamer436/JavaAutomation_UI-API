@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 public class ParseJson2 {
-
+    /// USED JACKSON CLASS TO PARSE JSON FILE
     public static void main(String[] args){
         ObjectMapper objectMapper=new ObjectMapper();
         String filePath = "resourcess/ExampleJson1.json";

@@ -6,6 +6,7 @@ import java.util.Map;
 import io.restassured.path.json.JsonPath;
 
 public class ParseJson3_UsingDotNotation {
+    /// USED REST ASSURED "JSON PATH" CLASS
     public static void main(String[] args){
         String filePath = "resources/ExampleJson1.json";
         try (InputStream inputStream = ParseJson3_UsingDotNotation.class.getClassLoader().getResourceAsStream("ExampleJson1.json")) {

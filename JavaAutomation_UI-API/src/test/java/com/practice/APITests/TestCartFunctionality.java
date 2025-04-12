@@ -1,20 +1,15 @@
 package com.practice.APITests;
-
 import io.restassured.http.ContentType;
-import io.restassured.http.Method;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
-
+import java.io.File;
 import java.util.*;
-
-import static io.restassured.RestAssured.baseURI;
 import static io.restassured.RestAssured.given;
 
 public class TestCartFunctionality extends BaseClass {
     public static String cartId = "";
     public List<Integer> productId = new ArrayList<>();
     public static Integer itemId = 0;
-
     @Test(priority = 0)
     public void testCreateNewCart() {
         Response response = given().contentType(ContentType.JSON).when().post(baseUrl + "/carts");
@@ -42,6 +37,13 @@ public class TestCartFunctionality extends BaseClass {
                     //.queryParam("cartId",cartId)
                     .contentType(ContentType.JSON)
                     .when().post(baseUrl + "/carts/{cartId}/items?cartId=" + cartId);
+
+            //consumed input json from FILE
+            Response response1 = given().pathParam("cartId", cartId).body(new File("src/test/java/com/practice/APITests/input.json"))
+                    //.queryParam("cartId",cartId)
+                    .contentType(ContentType.JSON)
+                    .when().post(baseUrl + "/carts/{cartId}/items?cartId=" + cartId);
+            //consumed input json from FILE
             System.out.println("response code " + response.getStatusCode());
             System.out.println("response body " + response.jsonPath().get("itemId"));
             itemId = response.jsonPath().get("itemId");
@@ -61,6 +63,8 @@ public class TestCartFunctionality extends BaseClass {
         for (Map c : (List<Map>) response.jsonPath().get()) {
             System.out.println("ID " + c.get("id"));
         }
+        //DOT NOTATION TO GET LIST OF ITEM IDS ADDED TO CART
+        System.out.println("dot notation "+response.jsonPath().getString("id"));
     }
 
     @Test(priority = 3)

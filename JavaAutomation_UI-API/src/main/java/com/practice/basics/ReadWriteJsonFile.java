@@ -14,7 +14,7 @@ import java.util.Map;
 import java.util.HashMap;
 
 public class ReadWriteJsonFile {
-
+    /// USED GSON CLASS TO PARSE JSON FILE
     private static final String FILE_PATH = "data.json";  // The path to your JSON file
     private static final Gson gson = new Gson();  // Gson instance
 
