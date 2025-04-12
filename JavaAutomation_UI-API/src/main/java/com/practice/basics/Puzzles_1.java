@@ -66,6 +66,8 @@ public class Puzzles_1 {
 
         swapStrings();
 
+        replaceSecondO();
+
     }
 
     public static String get_rev_string(String input) {
@@ -583,5 +585,26 @@ public class Puzzles_1 {
 
         System.out.println("String1 "+string1);
         System.out.println("String2 "+string2);
+    }
+
+    public static void replaceSecondO(){
+        String input="tomorrow";
+        String output="";
+        int count=0;
+        for(char i:input.toCharArray()){
+            if (i=='o'){
+                count++;
+                if (count==2){
+                    output=output+"$";
+                }
+                else{
+                    output=output+i;
+                }
+            }else{
+                output=output+i;
+            }
+        }
+        System.out.println("Output string "+output);
+
     }
 }

@@ -8,10 +8,12 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class ParseJson4_UsingDotNotation {
+    /// USED REST ASSURED "JSON PATH" CLASS
     public static void main(String[] args) {
         String filePath = "resources/ExampleJson3.json";
         try (InputStream inputStream = ParseJson4_UsingDotNotation.class.getClassLoader().getResourceAsStream("ExampleJson3.json")) {
@@ -50,6 +52,11 @@ public class ParseJson4_UsingDotNotation {
             //close the printer after the file is complete
             printer.flush();
             printer.close();
+
+            Map<String,Integer> areas=jsonPath.getMap("interviewPrep.selfAssessment.confidence.areas");
+            for(Map.Entry<String,Integer> entry: areas.entrySet()){
+                System.out.println("KEY-VALUE "+entry.getKey() +"-"+entry.getValue());
+            }
 
         } catch (IOException e) {
             e.printStackTrace();
