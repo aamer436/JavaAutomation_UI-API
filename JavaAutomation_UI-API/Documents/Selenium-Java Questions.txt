@@ -98,3 +98,36 @@ MAVEN COMMANDS:
 | Excludes the `testFailedLogin` method from the execution.                                       |
 
 diff bw get & navigate().to() - waits for page load, doesnot wait
+
+---How to interact with hidden elements in DOM
+Using Js executor
+1)js.executeScript("arguments[0].click();",element);
+2)Modifying the display:None to display:block using js ---- this statement unhides the element.
+js.executeScript("arguments[0].style.display='block';",element);
+element.click()
+
+-- Functional interfaces - Predicate, Consumer,Supplier, Function, BiFunction
+Predicate - represents a condition on the input
+Supplier - as name indicates - no input, but returns some output
+Consumer - opposite of supplier
+Function - takes 1 input , returns an output
+BiFunction - takes 2 input, returns an output
+
+--- selenium grid setup
+
+-- soft and hard assertions
+
+--- logging setup using apache log4j dependency
+
+-- jenkins file - how to setup CI/CD pipeline
+
+-- How to switch exactly to 3rd window out of 4 windows - Set does not store in order.
+### driver.getWindowHandle() returns windowid in string.
+//click on link to open a new window
+driver.findElement(By.linkText("Open new window")).click();
+//fetch handles of all windows, there will be two, [0]- default, [1] - new window
+Object[] windowHandles=driver.getWindowHandles().toArray();
+driver.switchTo().window((String) windowHandles[1]);
+//assert on title of new window
+String title=driver.getTitle();
+assertEquals("Simple Page",title);

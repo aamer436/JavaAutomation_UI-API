@@ -12,6 +12,7 @@ import java.util.Map;
 import static io.restassured.RestAssured.given;
 
 public class BaseClass {
+    // API documentation https://github.com/vdespa/Postman-Complete-Guide-API-Testing/blob/main/simple-grocery-store-api.md
     String accessToken="";
     String baseUrl="https://simple-grocery-store-api.glitch.me";
     @BeforeClass

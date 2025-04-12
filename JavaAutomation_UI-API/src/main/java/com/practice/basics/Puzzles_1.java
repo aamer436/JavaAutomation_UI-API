@@ -64,6 +64,8 @@ public class Puzzles_1 {
 
         stringFunctions();
 
+        swapStrings();
+
     }
 
     public static String get_rev_string(String input) {
@@ -493,7 +495,7 @@ public class Puzzles_1 {
     public static void countOccurenceOfCharacters(){
         String input="sdfjdnkajsdf";
         Map<Character,Integer> count=new HashMap<>();
-        for(Character c: input.toCharArray()){
+        for(char c: input.toCharArray()){
             if(!count.containsKey(c)){
                 count.put(c,1);
             }else{
@@ -572,6 +574,14 @@ public class Puzzles_1 {
         return input;
     }
 
+    public static void swapStrings(){
+        String string1="Hello11";
+        String string2="World26367";
+        string1=string1+string2;
+        string2=string1.substring(0,string1.length()-string2.length());
+        string1=string1.substring(string2.length());
 
-
+        System.out.println("String1 "+string1);
+        System.out.println("String2 "+string2);
+    }
 }
