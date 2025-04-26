@@ -1,4 +1,8 @@
 1)HashMap vs TreeMap
+no guaranteed order -- maintains sorted order based on keys
+allows one null key -- does not allow null key
+allows multiple null values -- allows null values
+fast -- slow
 2)ElementNotClickableException vs ElementNotInteractableException
 3)Alpha vs Beta Testing
 4)Assert vs Verify
@@ -7,7 +11,6 @@
 7)Singleton vs Factory design pattern
 8)Some interfaces in selenium - searchContext, TakesScreenshot, WebDriver, WebElement
 9)WebElement is an Interface , RemoteWebElement provides implementation for this interface
-******public class RemoteWebDriver extends RemoteWebElement implements WebDriver******
 RemoteWebDriver is an abstract class implementing WebDriver Interface.
 ChromeDriver, FirefoxDriver,SafariDriver,EdgeDriver are concrete implementations of WebDriver and extends
    RemoteWebDriver class

@@ -60,6 +60,7 @@ public class TestCartFunctionality extends BaseClass {
                 .when().get(baseUrl + "/carts/{cartId}/items");
         System.out.println("response code " + response.getStatusCode());
         System.out.println("response body" + response.getBody().asString());
+        //////// HERE plain get() method called , no key passed //////////////////////
         for (Map c : (List<Map>) response.jsonPath().get()) {
             System.out.println("ID " + c.get("id"));
         }

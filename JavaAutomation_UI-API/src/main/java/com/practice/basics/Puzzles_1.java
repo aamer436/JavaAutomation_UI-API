@@ -38,6 +38,8 @@ public class Puzzles_1 {
 
         find_second_highest_element();
 
+        find_second_highest_element_based_on_key_value();
+
         find_common_elements_in_two_lists();
 
         swap_without_third_variable();
@@ -342,7 +344,10 @@ public class Puzzles_1 {
             int result = numerator / denominator;
             System.out.println("Result :" + result);
         }catch (ArithmeticException e){
-            System.out.println("Error: Cannot divide by zero");
+            System.out.println("Error: Cannot divide by zero -- arithmetic");
+        }
+        catch (Exception e){
+        System.out.println("Error: Cannot divide by zero -- exception");
         }finally {
             System.out.println("Execution of given method complete!");
         }
@@ -427,6 +432,27 @@ public class Puzzles_1 {
                 break;
             }
         }
+    }
+
+    public static void find_second_highest_element_based_on_key_value(){
+        // Create a simple HashMap
+        HashMap<String, Integer> map = new HashMap<>();
+        map.put("apple", 5);
+        map.put("banana", 2);
+        map.put("cherry", 8);
+        map.put("date", 3);
+
+        // Sort by key in descending order
+        List<String> keys = new ArrayList<>(map.keySet());
+        Collections.sort(keys, Collections.reverseOrder());
+        String secondKey = keys.get(1);
+        System.out.println("Second by key descending: " + secondKey + " = " + map.get(secondKey));
+
+        // Sort by value in descending order
+        List<Map.Entry<String, Integer>> entries = new ArrayList<>(map.entrySet());
+        entries.sort((e1, e2) -> e2.getValue() - e1.getValue());
+        Map.Entry<String, Integer> secondValueEntry = entries.get(1);
+        System.out.println("Second by value descending: " + secondValueEntry.getKey() + " = " + secondValueEntry.getValue());
     }
 
     public static void find_common_elements_in_two_lists(){
@@ -536,6 +562,16 @@ public class Puzzles_1 {
         StringBuilder sbd = new StringBuilder("Hello");
         sbd.append(" world"); //updates same string object instead of creating new one.
         System.out.println("Updated string builder string "+sbd);
+
+        //here a, b point to same object in "String constant pool, c points to new object in "heap""
+        System.out.println("Explaining String Constant Pool and Intern method");
+        String a="heyyy";
+        String b="heyyy";
+        System.out.println(a==b);
+        String c=new String("heyyy");
+        System.out.println(a==c);
+        //FORCE POOLING to point c also to the existing string object created by a
+        System.out.println(a==c.intern());
     }
 
     public static void reverse_array(){
@@ -558,6 +594,7 @@ public class Puzzles_1 {
 
     public static void forEachExamples(){
         List<Integer> test=Arrays.asList(1,2,4,5,332,1,2,3);
+        test.stream().forEach(n->System.out.println(n));
         List<Integer> squares =test.stream().map(n->n*n).collect(Collectors.toList());
         System.out.println("Squares "+squares);
 
@@ -577,11 +614,11 @@ public class Puzzles_1 {
     }
 
     public static void swapStrings(){
-        String string1="Hello11";
-        String string2="World26367";
-        string1=string1+string2;
-        string2=string1.substring(0,string1.length()-string2.length());
-        string1=string1.substring(string2.length());
+        String string1="Hello11"; //length=7
+        String string2="World26367"; //length=10
+        string1=string1+string2; //Hello11World26367  length=17
+        string2=string1.substring(0,string1.length()-string2.length()); //(0,(17-10)
+        string1=string1.substring(string2.length());//(7,end)
 
         System.out.println("String1 "+string1);
         System.out.println("String2 "+string2);
