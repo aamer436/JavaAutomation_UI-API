@@ -6,10 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="04a75f03-095c-429b-8f29-49116a0f2989" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documents/Core-Java1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Documents/Core-Java1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Documents/Selenium-Java Questions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Documents/Selenium-Java Questions.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/MyFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/MyFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/basics/ParseJson3_UsingDotNotation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/basics/ParseJson3_UsingDotNotation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/practice/basics/Puzzles_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/practice/basics/Puzzles_1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/practice/APITests/BaseClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/practice/APITests/BaseClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/practice/APITests/TestCartFunctionality.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/practice/APITests/TestCartFunctionality.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/practice/APITests/TestOpenCartNestedAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/practice/APITests/TestOpenCartNestedAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/practice/UITests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/practice/UITests/BaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +59,7 @@
     &quot;Application.ReverseLinkedList.executor&quot;: &quot;Run&quot;,
     &quot;Application.TestFindBrokenLinks.executor&quot;: &quot;Run&quot;,
     &quot;Application.TestFindBrokenLinks_1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TestWebTable.executor&quot;: &quot;Run&quot;,
     &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;TestNG.APITest1.executor&quot;: &quot;Run&quot;,
@@ -62,22 +67,25 @@
     &quot;TestNG.BaseClass.executor&quot;: &quot;Run&quot;,
     &quot;TestNG.Status.executor&quot;: &quot;Run&quot;,
     &quot;TestNG.TestCartFunctionality.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TestOpenCartNestedAPI.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TestWebTable.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/maame/IdeaProjects/JavaAutomation_UI-API/Documents/notes&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/maame/IdeaProjects/JavaAutomation_UI-API/src/main/resources&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\maame\IdeaProjects\JavaAutomation_UI-API\src\main\resources" />
       <recent name="C:\Users\maame\IdeaProjects\JavaAutomation_UI-API\Documents\notes" />
       <recent name="C:\Users\maame\IdeaProjects\JavaAutomation_UI-API\output" />
       <recent name="C:\Users\maame\IdeaProjects\JavaAutomation_UI-API\Documents" />
       <recent name="C:\Users\maame\IdeaProjects\JavaAutomation_UI-API\src\main\java\com\practice\helper" />
-      <recent name="C:\Users\maame\IdeaProjects\JavaAutomation\Documents" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\maame\IdeaProjects\JavaAutomation_UI-API\Documents\Images" />
@@ -90,9 +98,22 @@
       <recent name="com.practice.api" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.TestCartFunctionality">
+  <component name="RunManager" selected="Application.QA_1">
     <configuration name="LeetCode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.practice.basics.LeetCode" />
+      <module name="JavaAutomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.practice.basics.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParseJson3_UsingDotNotation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.practice.basics.ParseJson3_UsingDotNotation" />
       <module name="JavaAutomation" />
       <extension name="coverage">
         <pattern>
@@ -117,15 +138,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReadWriteCsvFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.practice.basics.ReadWriteCsvFile" />
+    <configuration name="QA_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="QA_1" />
       <module name="JavaAutomation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.practice.basics.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -143,30 +158,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestCartFunctionality" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="JavaAutomation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.practice.APITests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.practice.APITests" />
-      <option name="MAIN_CLASS_NAME" value="com.practice.APITests.TestCartFunctionality" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.TestCartFunctionality" />
-        <item itemvalue="Application.Puzzles_1" />
-        <item itemvalue="Application.ReadWriteCsvFile" />
-        <item itemvalue="Application.ReadWriteTextFile" />
+        <item itemvalue="Application.QA_1" />
+        <item itemvalue="Application.ParseJson3_UsingDotNotation" />
         <item itemvalue="Application.LeetCode" />
+        <item itemvalue="Application.ReadWriteTextFile" />
+        <item itemvalue="Application.Puzzles_1" />
       </list>
     </recent_temporary>
   </component>

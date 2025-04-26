@@ -1,9 +1,11 @@
 package com.practice.basics;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 import java.util.Map;
 import io.restassured.path.json.JsonPath;
+import org.openqa.selenium.json.Json;
 
 public class ParseJson3_UsingDotNotation {
     /// USED REST ASSURED "JSON PATH" CLASS
@@ -14,6 +16,9 @@ public class ParseJson3_UsingDotNotation {
                 throw new IOException("File not found: ExampleJson1.json");
             }
             JsonPath jsonPath = new JsonPath(inputStream);
+            //USING FILE OBJECT instead of FileInputStream
+            JsonPath jss=new JsonPath(new File(System.getProperty("user.dir")+"/src/main/resources/ExampleJson11.json"));
+            System.out.println("Person name jss object "+jss.getString("person.name"));
             System.out.println("Person Name "+jsonPath.getString("person.name"));
             List<Map> hobbies = jsonPath.getList("person.hobbies");
             for(Map i : hobbies){

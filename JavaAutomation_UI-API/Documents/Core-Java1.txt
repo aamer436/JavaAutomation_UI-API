@@ -143,3 +143,15 @@ No, exceptions thrown by the close() method are automatically added to the list 
 10. What happens if a resource in a try-with-resources block implements AutoCloseable but throws an exception in its close() method?
 If a resource throws an exception in its close() method, that exception is treated as a "suppressed" exception and added to the list of suppressed exceptions. The original exception thrown in the try block is still propagated to the caller, and the exception from the close() method is available as a suppressed exception.
 These questions explore advanced behaviors, nuances, and edge cases of the try-with-resources statement and resource management in Java.
+
+Java Design Patterns:
+Singleton, Factory, Builder, Adapter, Composite, Observer, Prototype
+
+SOLID principles:
+SRP - Single responsibility principle
+OCP - Open Closed Principle
+LSP - Liskov Substitution Principle
+ISP - Interface Segregation Principle
+DIP - Dependency Inversion Principle
+
+OOPS - Abstraction, Encapsulation, Polymorphism, Inheritance, Composition
